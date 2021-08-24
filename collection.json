@@ -1,0 +1,2918 @@
+{
+	"info": {
+		"_postman_id": "cd2c5a65-bd97-43e2-8370-9d85ebe2bb20",
+		"name": "POS Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "restaurant",
+			"item": [
+				{
+					"name": "getRestaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addRestaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"restaurantName\": \"MacD\",\r\n    \"restaurantAddress\": \"Kokran road\",\r\n    \"restaurantCity\": \"Nadiad\",\r\n    \"restaurantPincode\": \"387001\",\r\n    \"restaurantContact\": \"9428888645\",\r\n    \"restaurantEnabled\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelRestaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRestaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"restaurantName\": \"MacD\",\r\n    \"restaurantAddress\": \"Kokran road\",\r\n    \"restaurantCity\": \"wakad\",\r\n    \"restaurantPincode\": \"411057\",\r\n    \"restaurantContact\": \"9428888600\",\r\n    \"restaurantEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "getCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/2/category",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"2",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"wheat beer\",\r\n    \"categorySrNumber\": 5,\r\n    \"categoryEnabled\": 1,\r\n    \"categoryImage\": \"2021-07-15T04:46:02.773903600_Screenshot (1).png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/2/category",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"2",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/2/category/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"2",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"wheat beer\",\r\n    \"categorySrNumber\": 5,\r\n    \"categoryEnabled\": 1,\r\n    \"categoryImage\": \"2021-07-15T04:46:02.773903600_Screenshot (1).png\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/2/category/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"2",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "get All Tags",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/tag",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tagName\": \"Drink\",\r\n    \"tagSrNumber\": 5,\r\n    \"tagEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/tag",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelTag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/tag/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tagName\": \"Veg\",\r\n    \"tagSrNumber\": 1,\r\n    \"tagEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/tag/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "price-model",
+			"item": [
+				{
+					"name": "getPriceModel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/priceModel",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"priceModel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPriceModel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pmodelName\": \"Dinner\",\r\n    \"pmodelSrNumber\": 1,\r\n    \"pmodelEnabled\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/priceModel",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"priceModel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelPriceModel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/priceModel/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"priceModel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePriceModel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pmodelId\": 1,\r\n    \"pmodelName\": \"Weekend-new\",\r\n    \"pmodelSrNumber\": 1,\r\n    \"pmodelEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/priceModel/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"priceModel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "image",
+			"item": [
+				{
+					"name": "uploadImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/nirvidh/Desktop/Yashodharbhai/Candidate/Rajiv.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/upload",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "downloadImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/download/2021-07-22T22:36:01.723721_Rajiv.txt",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"download",
+								"2021-07-22T22:36:01.723721_Rajiv.txt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1?details=true",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1"
+							],
+							"query": [
+								{
+									"key": "details",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 2,\r\n    \"productName\": \"Cheese pizza\",\r\n    \"productIsSpecial\": 1,\r\n    \"restaurantId\": 1,\r\n    \"categoryId\": 1,\r\n    \"productImage\": \"2021-07-16T00:19:51.833896100_Screenshot (2).png\",\r\n    \"productRating\": \"3.5\",\r\n    \"productPrice\": \"100.0\",\r\n    \"productEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Non-Veg pizza\",\r\n    \"productIsSpecial\": 1,\r\n    \"categoryId\": 1,\r\n    \"productImage\": \"2021-07-16T00:19:51.833896100_Screenshot (2).png\",\r\n    \"productRating\": \"3.5\",\r\n    \"productPrice\": \"200.0\",\r\n    \"productEnabled\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productDetailDescription\": \"testing desc 22\",\r\n    \"productDetailSummary\": \"Cheese pizza 22\",\r\n    \"productImages\": [\r\n        {\r\n            \"productImageId\": null,\r\n            \"productImage\": \"xyz\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/details",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/details",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productDetailDescription\": \"testing desc 3\",\r\n    \"productDetailSummary\": \"Cheese pizza 4\",\r\n    \"productImages\": [\r\n        {\r\n            \"productImageId\": null,\r\n            \"productImage\": \"2021-07-16T00:19:51.833896100_Screenshot (2).png\"\r\n        },\r\n        {\r\n            \"productImageId\": 2,\r\n            \"productImage\": \"2021-07-16T00:19:51.833896100_Screenshot (2).png\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/details",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "variant-addon",
+			"item": [
+				{
+					"name": "getVariant",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/product/1/variant",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								"1",
+								"variant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUpdateVariant",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"variantId\": null,\n        \"variantName\": \"Big\",\n        \"variantPrice\": 11.0,\n        \"productId\": 1,\n        \"variantEnabled\": 1\n    },\n    {\n        \"variantId\": null,\n        \"variantName\": \"Regular\",\n        \"variantPrice\": 5.75,\n        \"productId\": 1,\n        \"variantEnabled\": 0\n    },\n    {\n        \"variantId\": null,\n        \"variantName\": \"small\",\n        \"variantPrice\": 3.5,\n        \"productId\": 1,\n        \"variantEnabled\": 1\n    },\n    {\n        \"variantId\": null,\n        \"variantName\": \"x-small\",\n        \"variantPrice\": 3.5,\n        \"productId\": 1,\n        \"variantEnabled\": 1\n    },\n    {\n        \"variantId\": null,\n        \"variantName\": \"x-smallnew\",\n        \"variantPrice\": 3.5,\n        \"productId\": 1,\n        \"variantEnabled\": 1\n    }\n]"
+						},
+						"url": {
+							"raw": "http://{{URL}}/product/1/variant",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								"1",
+								"variant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelVariant",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/product/1/variant/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								"1",
+								"variant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddon",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/product/1/addon",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								"1",
+								"addon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUpdateAddon",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n            \"addonId\": 1,\n            \"addonName\": \"Cheeseburst\",\n            \"addonPrice\": 55.0,\n            \"productId\": 1,\n            \"addonEnabled\": 1\n        },\n        {\n            \"addonId\": 2,\n            \"addonName\": \"x-cheese\",\n            \"addonPrice\": 50.0,\n            \"productId\": 1,\n            \"addonEnabled\": 1\n        },\n        {\n            \"addonId\": 3,\n            \"addonName\": \"paneer\",\n            \"addonPrice\": 9.0,\n            \"productId\": 1,\n            \"addonEnabled\": 1\n        }\n]"
+						},
+						"url": {
+							"raw": "http://{{URL}}/product/1/addon",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								"1",
+								"addon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelAddon",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/product/1/addon/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								"1",
+								"addon",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product-price",
+			"item": [
+				{
+					"name": "getProductPrice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/productPrice?masterDetails=true",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"productPrice"
+							],
+							"query": [
+								{
+									"key": "masterDetails",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUpdateProductPrice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n        {\r\n            \"ppriceId\": null,\r\n            \"productId\": 1,\r\n            \"pmodelId\": 2,\r\n            \"productPrice\": 45.75,\r\n            \"ppriceEnabled\": 0\r\n        },\r\n        {\r\n            \"ppriceId\": null,\r\n            \"productId\": 1,\r\n            \"pmodelId\": 1,\r\n            \"productPrice\": 35.5,\r\n            \"ppriceEnabled\": 1\r\n        },\r\n        {\r\n            \"ppriceId\": null,\r\n            \"productId\": 1,\r\n            \"pmodelId\": 3,\r\n            \"productPrice\": 25.5,\r\n            \"ppriceEnabled\": 1\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/productPrice",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"productPrice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelProductPrice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/productPrice/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"productPrice",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product-tag",
+			"item": [
+				{
+					"name": "getProductTag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/tags?masterDetails=true",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "details",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "masterDetails",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProductTag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    1,\r\n    2,\r\n    4\r\n]"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/product/1/tags",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"product",
+								"1",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ingredient",
+			"item": [
+				{
+					"name": "getIngredients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/ingredient",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addIngredient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ingredientId\": null,\r\n    \"ingredientName\": \"Milk\",\r\n    \"ingredientQuantityType\": \"ml\",\r\n    \"ingredientEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/ingredient",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggelIngredient",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/ingredient/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"ingredient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateIngredient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ingredientName\": \"Cheese\",\r\n    \"ingredientQuantityType\": \"gm\",\r\n    \"ingredientEnabled\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/ingredient/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"ingredient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "recipe",
+			"item": [
+				{
+					"name": "getRecipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/recipe",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"recipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addRecipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipeId\": null,\r\n    \"productId\": 1,\r\n    \"variantId\": 1,\r\n    \"recipeEnabled\": 1,\r\n    \"recipeDetails\": [\r\n        {\r\n            \"recipeId\": null,\r\n            \"ingredientId\": 1,\r\n            \"quantity\": 50,\r\n            \"recipeDetailEnabled\": 1\r\n        },\r\n        {\r\n            \"recipeId\": null,\r\n            \"ingredientId\": 2,\r\n            \"quantity\": 100,\r\n            \"recipeDetailEnabled\": 1\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/recipe",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"recipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggleRecipe",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/recipe/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"recipe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRecipe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipeId\": 2,\r\n    \"productId\": 1,\r\n    \"variantId\": 1,\r\n    \"recipeEnabled\": 1,\r\n    \"recipeDetails\": [\r\n        {\r\n            \"recipeDetailId\": 1,\r\n            \"recipeId\": 1,\r\n            \"ingredientId\": 1,\r\n            \"quantity\": 50.0,\r\n            \"recipeDetailEnabled\": 1\r\n        },\r\n        {\r\n            \"recipeDetailId\": 2,\r\n            \"recipeId\": 1,\r\n            \"ingredientId\": 2,\r\n            \"quantity\": 100.0,\r\n            \"recipeDetailEnabled\": 1\r\n        },\r\n        {\r\n            \"recipeDetailId\": null,\r\n            \"recipeId\": 2,\r\n            \"ingredientId\": 2,\r\n            \"quantity\": 250.0,\r\n            \"recipeDetailEnabled\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/recipe/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"recipe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRecipeDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/recipe/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"recipe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "offline",
+					"item": [
+						{
+							"name": "get All offline gateway",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{URL}}/gateway/offline",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"offline"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get offline gateway",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{URL}}/gateway/offline/1",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"offline",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add offline gateway",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"offGatewayName\": \"Cash\",\r\n    \"offGatewayDescription\": \"Cash on counter\",\r\n    \"offGatewaySrNumber\": 1,\r\n    \"offGatewayEnabled\": 1\r\n}"
+								},
+								"url": {
+									"raw": "http://{{URL}}/gateway/offline",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"offline"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "toggel offline gateway status",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{URL}}/gateway/offline/1",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"offline",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update offline gateway",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"offGatewayName\": \"Cash\",\r\n    \"offGatewayDescription\": \"Cash on counter\",\r\n    \"offGatewaySrNumber\": 1,\r\n    \"offGatewayEnabled\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{URL}}/gateway/offline/1",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"offline",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "online",
+					"item": [
+						{
+							"name": "get All online gateway",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{URL}}/gateway/online",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"online"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "toggel online gateway status",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{URL}}/gateway/online/1",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"online",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update online gateway",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"onGatewayInfo\": {\r\n        \"clientSecret\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjYwODgwNzksInVzZXJfbmFtZSI6ImFkbWluQGdtYWlsLmNvbSIsImp0aSI6Il9yYTBKV3RwZ0lrZkNhMWFMa3NoaXVZTVB5YyIsImNsaWVudF9pZCI6ImZvb2RCaXp6QVBJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.oQ97EtTPFSHTyASTIj6diiPtG8l_kYMfCOrLriIptsNpVbqbyIeTHElP5csGgwMv4PKevExChliNGz9PDTCnCvod8V2C_WLxjrseXM8BnZRH6BG11V9i_LczS4qtXKyFbVhZcV9lJmxTpGkLznStWLJOXeW7zM5QnhO4LfHQmjcHm7QsXuo-oaKcLgI4zgA5QQCN7MtWMt8houXRus3eTH4MVd5GqGuvwI1Ao5DP1EatGb2lfdVEsvF3HNRb6DrFlWd4YK1xbhl2my0T8KbsTb1t-4Ayz2RZQJESE_bb9H1pn4AFWj19EUKt2MetNPC_IyWgEBOnJ_EHR51V65ahEg\",\r\n        \"clientId\": \"SE_bb9H1pn4AFWj19EUKt2MetNPC_IyWgEBOnJ_EHR51V65ahEg\"\r\n    },\r\n    \"onGatewaySrNumber\": 1,\r\n    \"onGatewayEnabled\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{URL}}/gateway/online/1",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"gateway",
+										"online",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "postal code",
+			"item": [
+				{
+					"name": "get All postal code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/postalCode",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"postalCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get postal code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/postalCode/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"postalCode",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add postal code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postalName\": \"Kothrud\",\r\n    \"postalCode\": \"411038\",\r\n    \"postalCharge\": 1.5,\r\n    \"postalSrNumber\": 1,\r\n    \"postalEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/postalCode",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"postalCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggel postal code status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/postalCode/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"postalCode",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update postal code",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postalName\": \"Kothrud\",\r\n    \"postalCode\": \"411038\",\r\n    \"postalCharge\": 1.5,\r\n    \"postalSrNumber\": 1,\r\n    \"postalEnabled\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/postalCode/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"postalCode",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "serving method",
+			"item": [
+				{
+					"name": "get All serving method",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod?masterDetails=true",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod"
+							],
+							"query": [
+								{
+									"key": "masterDetails",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get serving method",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add serving method",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"smName\": \"Dine In\",\r\n    \"smNote\": \"Dine In\",\r\n    \"smPModelId\": 0,\r\n    \"smSrNumber\": 1,\r\n    \"smEnabled\": 1,\r\n    \"smWebEnabled\": 0,\r\n    \"smQREnabled\": 0,\r\n    \"smPOSEnabled\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggel serving method status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"smEnabled\": 0,\r\n    \"smWebEnabled\": 1,\r\n    \"smQREnabled\": 1,\r\n    \"smPOSEnabled\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update serving method's price model",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod/1/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update serving method",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"smName\": \"Dine In\",\r\n    \"smNote\": \"Dine In\",\r\n    \"smPModelId\": 1,\r\n    \"smSrNumber\": 1,\r\n    \"smEnabled\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod/1",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All offline gateway for serving method",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod/1/gateway/offline?masterDetails=true",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod",
+								"1",
+								"gateway",
+								"offline"
+							],
+							"query": [
+								{
+									"key": "masterDetails",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update offline gateway for serving method",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    1\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/restaurant/1/servingMethod/1/gateway/offline",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restaurant",
+								"1",
+								"servingMethod",
+								"1",
+								"gateway",
+								"offline"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "oauth-token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJson = pm.response.json()\r",
+							"pm.collectionVariables.set(\"bearerToken\", responseJson.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "foodBizzAPI-secret-key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "foodBizzAPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{URL}}/oauth/token",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home-test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"URL\", \"localhost:9090\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjU1NjA5NDQsInVzZXJfbmFtZSI6ImFkbWluQGdtYWlsLmNvbSIsImp0aSI6IlNxUHdWa1Vjak83ODdrNS1qZXVpY3BHR1RmOCIsImNsaWVudF9pZCI6ImZvb2RCaXp6QVBJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.IXTggOU2KPFNOKfKiaLZ_uBhelpJypyzIOUJRXhRWYDRwTwFt_oPA0c-JrULbYQgqihPLf3cCX_fZ3ikhhu7sjxtTDNGbGOiJrgbD8ZHZDY9XpXfxdab3rpcePYm8UieTduTWXcZjppEfQobc2uFpSPzJ16zxtsKP2wjv-Oqq1pX5zvoILZH0s2DpM3ruNgEvq8oWKsjuENV1uWvLwoNzjrNqNzf-DWHqu6GqD85GjlBlKhI3vO3AMDnlopoHozsAevc3A3WTpk6FJEGnnDIdxYGwHuHr5ibj8TWBebvn4PXowy-DOPKr7lf8pXJ9-c8rZRoLlIHcveaoCGxmBTshg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjU1NzAzNDEsInVzZXJfbmFtZSI6ImFkbWluQGdtYWlsLmNvbSIsImp0aSI6IkktWHhLTFBzMld1MG56R3dSRVpBMjNqRUJXRSIsImNsaWVudF9pZCI6ImZvb2RCaXp6QVBJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.YbeZY6Iv5XwzupO5ZnLawA8iFbaLj4vfa6t9Y4vIKB9OHVXfoBFktFz7H1wKBYc13cDLXPQVn5Bz-9nhbgX5ZhMQZW9LOFL7Qg8ej9pxd-fmMWiSUoGch9ETvmsnwroGR8zbcUtIrGjF6PcJ_BMBZs5RIh-ekLwXZc7YiJBkygVmyTJt7_q9lugQM1GzxcOnABVfAib9lorR8eADftnL2W3QLeKMW1LkofeijG0SyMOWlx-RzArSjBEiTmZN8OlaFsCPx0aL-fj6nijQu1vEzn_XHU4TFXRrmk6d6hui14Z8taYnsUQXP4IoQdq2U6pCnszyrFZFuQCVQti6VKTSzg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjU1NjA5NDQsInVzZXJfbmFtZSI6ImFkbWluQGdtYWlsLmNvbSIsImp0aSI6IlNxUHdWa1Vjak83ODdrNS1qZXVpY3BHR1RmOCIsImNsaWVudF9pZCI6ImZvb2RCaXp6QVBJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.IXTggOU2KPFNOKfKiaLZ_uBhelpJypyzIOUJRXhRWYDRwTwFt_oPA0c-JrULbYQgqihPLf3cCX_fZ3ikhhu7sjxtTDNGbGOiJrgbD8ZHZDY9XpXfxdab3rpcePYm8UieTduTWXcZjppEfQobc2uFpSPzJ16zxtsKP2wjv-Oqq1pX5zvoILZH0s2DpM3ruNgEvq8oWKsjuENV1uWvLwoNzjrNqNzf-DWHqu6GqD85GjlBlKhI3vO3AMDnlopoHozsAevc3A3WTpk6FJEGnnDIdxYGwHuHr5ibj8TWBebvn4PXowy-DOPKr7lf8pXJ9-c8rZRoLlIHcveaoCGxmBTshg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userEmail\": \"nirvidh2@gmail.com\",\r\n    \"userFirstName\": \"nirvidh\",\r\n    \"userLastName\": \"patel\",\r\n    \"userMobile\": \"9428888640\",\r\n    \"userPin\": \"0000\",\r\n    \"userImage\": null,\r\n    \"userEnabled\": 1,\r\n    \"userAdminId\": 1,\r\n    \"userPassword\": \"password\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{URL}}/user",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "58.105.177.56:9091"
+		},
+		{
+			"key": "bearerToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjYwODgwNzksInVzZXJfbmFtZSI6ImFkbWluQGdtYWlsLmNvbSIsImp0aSI6Il9yYTBKV3RwZ0lrZkNhMWFMa3NoaXVZTVB5YyIsImNsaWVudF9pZCI6ImZvb2RCaXp6QVBJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.oQ97EtTPFSHTyASTIj6diiPtG8l_kYMfCOrLriIptsNpVbqbyIeTHElP5csGgwMv4PKevExChliNGz9PDTCnCvod8V2C_WLxjrseXM8BnZRH6BG11V9i_LczS4qtXKyFbVhZcV9lJmxTpGkLznStWLJOXeW7zM5QnhO4LfHQmjcHm7QsXuo-oaKcLgI4zgA5QQCN7MtWMt8houXRus3eTH4MVd5GqGuvwI1Ao5DP1EatGb2lfdVEsvF3HNRb6DrFlWd4YK1xbhl2my0T8KbsTb1t-4Ayz2RZQJESE_bb9H1pn4AFWj19EUKt2MetNPC_IyWgEBOnJ_EHR51V65ahEg"
+		}
+	]
+}
